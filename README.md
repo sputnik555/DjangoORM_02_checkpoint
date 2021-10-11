@@ -20,6 +20,7 @@ DATABASE_NAME - имя базы
 DATABASE_USER - имя пользователя
 DATABASE_PASSWORD - пароль
 DEBUG - режим отладки
+ALLOWED_HOSTS - список разрешенных хостов
 ```
 
 ### Как запустить
