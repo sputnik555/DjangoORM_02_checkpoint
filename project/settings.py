@@ -1,17 +1,21 @@
 import os
+from environs import Env
+
+ENV = Env()
+ENV.read_env()
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('DATABASE_ENGINE'),
-        'HOST': os.getenv('DATABASE_HOST'),
-        'PORT': os.getenv("DATABASE_PORT"),
-        'NAME': os.getenv("DATABASE_NAME"),
-        'USER': os.getenv("DATABASE_USER"),
-        'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+        'ENGINE': ENV('DATABASE_ENGINE'),
+        'HOST': ENV('DATABASE_HOST'),
+        'PORT': ENV("DATABASE_PORT"),
+        'NAME': ENV("DATABASE_NAME"),
+        'USER': ENV("DATABASE_USER"),
+        'PASSWORD': ENV("DATABASE_PASSWORD"),
     }
 }
 
-DEBUG = os.getenv("DEBUG")
+DEBUG = ENV.bool("DEBUG")
 
 INSTALLED_APPS = ['datacenter']
 
