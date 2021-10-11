@@ -2,7 +2,7 @@ import os
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': os.getenv('DATABASE_ENGINE'),
         'HOST': os.getenv('DATABASE_HOST'),
         'PORT': os.getenv("DATABASE_PORT"),
         'NAME': os.getenv("DATABASE_NAME"),

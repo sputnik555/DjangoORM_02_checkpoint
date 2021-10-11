@@ -13,6 +13,7 @@ pip install -r requirements.txt
 
 В файле `.env` необхододимо настроить параметры подключения к БД
 ```
+DATABASE_ENGINE - тип СУБД
 DATABASE_HOST - адрес подключения БД
 DATABASE_PORT - порт
 DATABASE_NAME - имя базы
