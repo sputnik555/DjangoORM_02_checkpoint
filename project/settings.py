@@ -15,13 +15,13 @@ DATABASES = {
     }
 }
 
-DEBUG = env.bool("DEBUG")
+DEBUG = env.bool('DEBUG')
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = 'REPLACE_ME'
+SECRET_KEY = env('SECRET_KEY')
 
-ROOT_URLCONF = "project.urls"
+ROOT_URLCONF = 'project.urls'
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
