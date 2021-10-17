@@ -1,3 +1,4 @@
 django==1.11.*
-psycopg2-binary==2.8.*
 python-dotenv
+environs~=9.3.4
+psycopg2-binary==2.8.*
